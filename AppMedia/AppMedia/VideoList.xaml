@@ -20,7 +20,7 @@
                                     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                         <StackLayout Orientation="Horizontal">
                                             <Label x:Name="id" IsVisible="false" Text="{Binding id}" ></Label>
-                                            <forms1:VideoView x:Name="video" Source="{Binding MiImage}"  WidthRequest ="100"
+                                            <forms1:VideoView x:Name="video" Source="{Binding MiImage}" VideoAspect="AspectFill"  WidthRequest ="100"
                                                HeightRequest="202"/>
                                             <Label
                                         Margin="10,0,0,0"
