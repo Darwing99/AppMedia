@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppMedia" 
+              xmlns:forms1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="AppMedia.MainPage">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Lista" Clicked="ToolbarItem_Clicked">
+            
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="10">
+         <ScrollView>
+        <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+            <Frame Visual="Material"  CornerRadius="10" HasShadow="False">
+                    <StackLayout>
+                        <forms1:VideoView x:Name="video" AutoPlay="True"  WidthRequest ="320"
+                         HeightRequest="202"/>
+                       
+                        <Entry IsVisible="False"  Margin="10" x:Name="nombre" Placeholder="Nombre"></Entry>
+                        <Editor IsVisible="False" Margin="10" x:Name="descripcion" Placeholder="Descripcion"></Editor>
+                </StackLayout>
+
+            </Frame>
+                <StackLayout Padding="10" HorizontalOptions="Center" VerticalOptions="FillAndExpand"  Orientation="Horizontal">
+                    <Button 
+                     x:Name="btnTomarFoto" 
+                     Text="Grabar Video"
+                     Clicked="btnTomarFoto_Clicked"   />
+                    <Button 
+                     x:Name="btnSeleccionarFoto" 
+                     Text="Guardar"
+                     Clicked="btnSeleccionarFoto_Clicked"/>       
+                </StackLayout>
+         
+            <Image x:Name="Imagen"/>
+        </StackLayout>
+    </ScrollView>
+    
+    </StackLayout>
+  
+</ContentPage>

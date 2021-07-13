@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="AppMedia.VideoView">
+    <ContentPage.Content>
+        <StackLayout >
+            <forms1:VideoView x:Name="video" Source="{Binding image}" Repeat="All"  Volume="100" HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand" IsFullWindow="True" Margin="10" FlowDirection="LeftToRight"  ShowControls="True"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:forms1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="AppMedia.VideoList">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <ListView
+            x:Name="listaItems"
+            RowHeight="200"
+           ItemSelected="listaItems_ItemSelected"
+            SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+
+                                <Frame Margin="5" HasShadow="True">
+                                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label x:Name="id" IsVisible="false" Text="{Binding id}" ></Label>
+                                            <forms1:VideoView x:Name="video" Source="{Binding MiImage}"  WidthRequest ="100"
+                                               HeightRequest="202"/>
+                                            <Label
+                                        Margin="10,0,0,0"
+                                        FontAttributes="Bold"
+                                        FontSize="16"
+                                        HorizontalOptions="Start"
+                                        LineBreakMode="NoWrap"
+                                        MaxLines="1"
+                                        Text="{Binding Nombre}"
+                                        TextColor="Black"
+                                        VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>
